@@ -1,6 +1,3 @@
-# Create a Service using Systemctl for the Firewall
-# /etc/systemd/system/firewall.service
-
 [Unit]
 Description=Custom Firewall using iptables
 After=syslog.target
