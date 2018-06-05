@@ -170,7 +170,16 @@ case ${action} in
     status)
         echo -e "\nThis function is not yet built in\n";
     ;;
+    test)
+        general;
+        flush;
+        kernel;
+        iptableRules;
+        sleep 60
+        general;
+        flush;
+    ;;
     *)
-        echo -e "Enter a valid command: [ start | stop | status ]";
+        echo -e "Enter a valid command: [ start | stop | status | test ]";
     ;;
 esac;
