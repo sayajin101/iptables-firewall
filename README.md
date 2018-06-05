@@ -19,5 +19,5 @@ Iptables Firewall Script with start, stop, restart, status functunality
   - systemctl mask firewalld
   
 - Start & enable firewall service
-  - service enable firewall
-  - service start firewall
+  - systemctl enable firewall
+  - systemctl start firewall
