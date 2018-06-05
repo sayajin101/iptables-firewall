@@ -1,0 +1,15 @@
+# Create a Service using Systemctl for the Firewall
+# /etc/systemd/system/firewall.service
+
+[Unit]
+Description=Custom Firewall using iptables
+After=syslog.target
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/etc/sysconfig/firewall.sh start
+ExecStop=/etc/sysconfig/firewall.sh stop
+
+[Install]
+WantedBy=multi-user.target
